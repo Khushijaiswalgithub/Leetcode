@@ -14,7 +14,7 @@ public:
                 
                 
                 if(f(ind+1,board,word,vis,n,m,nr,nc)){
-                    vis[r][c] = 0;   
+                    // vis[r][c] = 0;   
                     return true;
                 }
             }
