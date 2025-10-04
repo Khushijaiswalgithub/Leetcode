@@ -12,10 +12,14 @@
 class Solution {
 public:
     void func(TreeNode* root,int level,vector<int>&q){
-        if(root==NULL) return ;
-        if(level==q.size()) q.push_back(root->val);
-        func(root->right,level+1,q);
-        func(root->left,level+1,q);
+        if(root==NULL) return;
+        if(q.size()==level) q.push_back(root->val);
+        if(root->right){
+            func(root->right,level+1,q);
+        }
+        if(root->left){
+            func(root->left,level+1,q);
+        }
 
 
     }
